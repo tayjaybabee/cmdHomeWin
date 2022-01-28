@@ -6,6 +6,8 @@ SetWorkingDir %A_ScriptDir% ; Ensures a consistent starting directory.
 
 EnvGet, EnvVar, USERNAME
 
+Run, %ComSpec% /c ""C:\Windows\py.exe" "%A_ScriptDir%\service\win_start.py""
+
 ::cd ~::
     Send, cd C:/Users/%EnvVar%{enter}
     TrayTip, Changed Input, Converted 'cd ~' to the actual path, 20, 17
